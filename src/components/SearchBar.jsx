@@ -1,11 +1,11 @@
 import { Link } from 'react-router-dom'
 
-function NavBar() {
+function SearchBar() {
     return(
-        <div>This is NavBar Component
+        <div id="searchBar">This is SearchBar Component
             <Link to="/players/:id">Link To A Single Player</Link>
         </div>
     )
 }
 
-export default NavBar;
+export default SearchBar;
