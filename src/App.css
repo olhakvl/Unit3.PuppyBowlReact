@@ -70,3 +70,63 @@
 .singlePlayerCard img {
   width: 150px;
 } */
+
+
+/* #formSection {
+  align-items: center;
+} */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  margin: 10px;
+  width: 500px;
+  align-items: center;
+  background-color: rgb(162, 186, 231);
+  text-align: center;
+  margin-left: 30%;
+}
+
+#createPlayerButton{
+  margin: 10px;
+}
+
+input{
+  padding: 5px;
+  margin: 5px;
+}
+
+#allPlayersComponent{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.singlePlayerCard{
+  text-align: center;
+  background-color: #FFE3CC;
+  margin: 10px;
+  padding: 25px;
+  width: 200px;
+  border-radius: 10%;
+}
+
+.singlePlayerCard img{
+  width: 150px;
+}
+
+#playerDetails{
+  text-align: center;
+  background-color: #FFE3CC;
+  padding: 30px 50px 30px 50px;
+  margin: 10px;
+  padding-top: 50px;
+  width: 30%;
+  border-radius: 5%;
+}
+
+#playerDetails img{
+  width: 100px;
+}

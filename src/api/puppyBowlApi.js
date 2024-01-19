@@ -7,39 +7,28 @@ export const puppyBolwApi = createApi({
     baseQuery: fetchBaseQuery({ baseUrl }),
     endpoints: (builder) => ({
         getPlayers: builder.query({
-            query: () => "players"
+            query: () => "players",
+            providesTags: ['Players']
         }),
         getPlayerDetails: builder.query({
-            query: (playerId) => `players/${playerId}` 
+            query: (playerId) => `players/${playerId}`
         }),
         addPlayer: builder.mutation({
             query: (newPlayerRequestBody) => ({
                 url: "players",
                 method: "POST",
                 body: newPlayerRequestBody
-            })
+            }),
+            invalidatesTags: ['Players']
         }),
         deletePlayer: builder.mutation({
-            query: (playerId) => `players/${playerId}`,
-            method: "DELETE"
-        })
+            query: (playerId) => ({
+                url: `players/${playerId}`,
+                method: "DELETE"
+            }),
+            invalidatesTags: ['Players']
+        }),
     })
 });
 
 export const { useGetPlayersQuery, useGetPlayerDetailsQuery, useAddPlayerMutation, useDeletePlayerMutation } = puppyBolwApi
-
-
-
-
-// export const fetchAllPlayers = async () => {
-//     try {
-//         // Get all players from API 
-//         const playersResponse = await fetch(API_URL);
-//         // Convert the response to JSON format
-//         const playersJson = await playersResponse.json();
-//         console.log("playersJson.data.players: ", playersJson.data.players);
-//         return playersJson.data.players;
-//     } catch (error) {
-//         console.log("Error: ", error);
-//     }
-// }
