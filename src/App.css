@@ -121,12 +121,23 @@ input{
   text-align: center;
   background-color: #FFE3CC;
   padding: 30px 50px 30px 50px;
-  margin: 10px;
+  margin: 30px;
   padding-top: 50px;
-  width: 30%;
+  width: 200%;
   border-radius: 5%;
 }
 
 #playerDetails img{
   width: 100px;
+}
+
+#searchInput{
+  margin: 50px;
+  align-self:auto;
+}
+
+#navBar{
+  text-align: center;
+  font-size: 30px;
+  background-color: aliceblue;
 }
